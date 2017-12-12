@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/fontawesome.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -38,8 +40,7 @@
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/supplierRegister') }}">Supplier Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('/register') }}">Customer Register</a></li>
+                     <li class="nav-item"><a class="nav-link" href="{{ url('/customerRegister') }}">Register</a></li>
 
                 @else
                     <li class="dropdown">
@@ -73,8 +74,13 @@
     @yield('content')
 </div>
 
-<!-- Scripts -->
+<script src="/js/jquery-3.2.1.js"></script>
+<script src="/js/popper.min.js"></script>
+
+<script src="/js/bootstrap.js"></script>
+
 <script src="/js/app.js"></script>
+
 
 </body>
 </html>
