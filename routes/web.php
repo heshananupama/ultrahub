@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/supplierRegister', function () {
-    return view('auth/register');
+    return view('auth/supplierRegister');
 });
 Route::get('/customerRegister', function () {
     return view('auth/customerRegister');

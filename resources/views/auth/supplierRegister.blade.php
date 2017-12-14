@@ -4,7 +4,7 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-xs-8 offset-2">
+            <div class="col-sm-8 offset-sm-2">
                 <br>
                 <div class="row">
 
@@ -16,61 +16,63 @@
                 </div>
 
 
-                <form style="background-color: white;padding: 10px;" class="form-horizontal" role="form" method="POST"
+                <form style="background-color: white;padding: 10px;" class="form-horizontal rounded" role="form" method="POST"
                       action="{{ url('/register') }}">
                     {{ csrf_field() }}
                     <div class="row">
-                        <div class="col-3"></div>
+                        <div class="col-sm-3"></div>
 
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <h3 style="font-weight: 900;color: #0f7864">Supplier Registration</h3>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-sm-3"></div>
                     </div>
+                    <br>
+
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="name" class="col-form-label">Your name</label>
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <select class="form-control" name="credential" id="">
                                 <option value="Mr.">Mr</option>
                                 <option value="Mr.">Ms</option>
 
                             </select>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
-                                <input id="name" type="text" placeholder="First Name" class="form-control"
-                                       name="name" value="{{ old('name') }}" autofocus>
+                                <input id="firstName" type="text" placeholder="First Name" class="form-control"
+                                       name="firstName" value="{{ old('firstName') }}" autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('firstName'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('firstName') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
 
-                                <input id="lastName" type="text" placeholder="Last Name" class="form-control"
-                                       name="lastName" value="{{ old('LastName') }}" autofocus>
+                                <input id="secondName" type="text" placeholder="Last Name" class="form-control"
+                                       name="secondName" value="{{ old('secondName') }}" autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('secondName'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('secondName') }}</strong>
                                     </span>
                                 @endif
                             </div>
 
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-sm-3"></div>
 
                     </div>
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="company" class="col-form-label">Company</label>
 
                         </div>
@@ -96,11 +98,11 @@
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="mobile" class="col-form-label">Mobile</label>
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
 
 
@@ -116,11 +118,11 @@
                             </div>
 
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="telephone" class="col-form-label">Telephone</label>
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-group{{ $errors->has('telephone') ? ' has-error' : '' }}">
 
 
@@ -139,11 +141,11 @@
 
                     </div>
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="address" class="col-form-label">Address</label>
 
                         </div>
-                        <div class="col-3">
+                        <div class="col-sm-3">
                             <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
 
 
@@ -160,7 +162,7 @@
                             </div>
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-group{{ $errors->has('province') ? ' has-error' : '' }}">
 
 
@@ -176,7 +178,7 @@
 
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-sm-3">
                             <div class="form-group{{ $errors->has('city') ? ' has-error' : '' }}">
 
 
@@ -193,14 +195,35 @@
                         </div>
 
                     </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
 
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
+
+
+                                <input placeholder="" id="address" type="text" class="form-control" name="address"
+                                       value="{{ old('address') }}" required>
+
+                                @if ($errors->has('address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('address') }}</strong>
+                                    </span>
+                                @endif
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
                             <label for="email" class="col-form-label">E-mail</label>
 
                         </div>
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
 
@@ -217,14 +240,14 @@
                             </div>
 
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-sm-4"></div>
 
                     </div>
 
 
                     <div class="form-group row">
-                        <div class="col-2"><label for="password" class="col-form-label">Password</label></div>
-                        <div class="col-6">
+                        <div class="col-sm-2"><label for="password" class="col-form-label">Password</label></div>
+                        <div class="col-sm-6">
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
                                 <input placeholder="Enter password" id="password" type="password"
@@ -238,14 +261,14 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-sm-4"></div>
 
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-2"><label for="password-confirm" class="col-form-label">Retype
+                        <div class="col-sm-2"><label for="password-confirm" class="col-form-label">Retype
                                 Pass.</label></div>
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
 
                                 <input placeholder="Confirm Password" id="password-confirm" type="password"
@@ -260,15 +283,15 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-sm-4"></div>
 
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="exampleRadios"
@@ -277,7 +300,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-check">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="exampleRadios"
@@ -286,16 +309,16 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-2">
 
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <div class="col-2">
+                        <div class="col-sm-2">
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-check ">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="exampleRadios"
@@ -304,7 +327,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <div class="form-check ">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="exampleRadios"
@@ -313,7 +336,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-sm-2">
 
                         </div>
                     </div>
@@ -321,7 +344,7 @@
 
                     <div class="form-group row">
 
-                        <div style="text-align: center" class="col-4 offset-4">
+                        <div style="text-align: center" class="col-sm-4 offset-sm-4">
                             <button type="submit" class="btn btn-outline-success btn-lg">
                                 Register
                             </button>

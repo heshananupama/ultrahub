@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="  container-fluid">
     <div class="row">
-        <div class="col-8 offset-2">
+        <div class="col-sm-8 offset-sm-2">
             <br>
             <div class="card">
                 <div class="card-heading" style="text-align: center">
                     <h3 style="font-weight: 900;color: #0f7864;margin-left: 10px;  float: left  ">Login</h3>
- 
+
                 </div>
                 <br>
                 <div class="card-body">
@@ -17,7 +17,7 @@
                             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                                 {{ csrf_field() }}
                                 <div class="row">
-                                    <div class="col-8 offset-2">
+                                    <div class="col-sm-8 offset-sm-2">
 
                                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                             <label for="email" class="  control-label">E-Mail Address</label>
@@ -34,12 +34,12 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-8 offset-2">
+                                    <div class="col-sm-8 offset-sm-2">
                                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                            <label for="password" class=" control-label">Password</label>
+                                            <label for="password" class="control-label">Password</label>
 
 
-                                            <input id="password" type="password" class="form-control" name="password" required>
+                                            <input id="password" type="password" class="form-control form-control-lg" name="password" required>
 
                                             @if ($errors->has('password'))
                                                 <span class="help-block">
@@ -52,29 +52,46 @@
 
                                 </div>
 
+                                <div class="row">
 
-
-                                <div class="form-group">
-                                    <div class="col-8 offset-2">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                            </label>
+                                        <div class="col-sm-8 offset-sm-2">
+                                            <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="col-6 offset-3">
-                                        <button type="submit" class="btn btn-primary btn-block">
-                                            Login
-                                        </button>
 
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            Forgot Your Password?
-                                        </a>
+                                <div class="row">
+                                    <div class="col-sm-8 offset-sm-2">
+                                    <div class="form-group">
+
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                Login
+                                            </button>
+
+
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-sm-8 offset-sm-2">
+                                        <div class="form-group">
+
+
+
+                                            <a style=" white-space:normal" class="btn btn-link" href="{{ route('password.request') }}">
+                                                Forgot Your Password?
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </form>
 
                         </div>
@@ -84,30 +101,30 @@
                                 {{ csrf_field() }}
                                 <br>
                                 <div class="row">
-                                    <div class="col-10 offset-1">
+                                    <div class="col-sm-10 offset-sm-1">
                                         <div class="form-group">
 
-                                            <a style="background-color: #3b5998" id="facebook" type="button" class="btn btn-lg  btn-block" name="facebook" ><i class="fa fa-facebook"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with facebook</span> </a>
+                                            <a style="background-color: #3b5998 ;white-space:normal" id="facebook" type="button" class="btn btn-lg  btn-block" name="facebook" ><i class="fa fa-facebook fa-lg"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with facebook</span> </a>
 
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-10 offset-1">
+                                    <div class="col-sm-10 offset-sm-1">
                                         <div class="form-group">
 
-                                            <a style="background-color: #0084b4" id="twitter" type="button" class="btn btn-lg  btn-block" name="twitter" ><i class="fa fa-twitter"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with twitter</span></a>
+                                            <a style="background-color: #0084b4 ;white-space:normal" id="twitter" type="button"  class="btn btn-lg  btn-block" name="twitter" ><i class="fa fa-twitter fa-lg"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with twitter</span></a>
 
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-10 offset-1">
+                                    <div class="col-sm-10 offset-sm-1">
                                         <div class="form-group">
 
-                                            <a style="background-color: #d34836" id="google" type="button" class="btn btn-lg  btn-block" name="google" ><i class="fa fa-google-plus"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with google</span></a>
+                                            <a style="background-color: #d34836 ;white-space:normal" id="google" type="button" class="btn btn-lg  btn-block" name="google" ><i class="fa fa-google-plus fa-lg"></i>&nbsp;&nbsp;<span style="font-size: medium"> Sign in with google</span></a>
 
                                         </div>
 
@@ -122,6 +139,13 @@
             </div>
         </div>
     </div>
+    <section class="container p-t-3">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Bootstrap 4 Card Slider</h1>
+            </div>
+        </div>
+    </section>
 </div>
 <script src="/js/jquery-3.2.1.js"></script>
 <script src="/js/bootstrap.js"></script>
