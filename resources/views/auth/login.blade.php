@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="  container-fluid">
+
     <div class="row">
         <div class="col-sm-8 offset-sm-2">
             <br>
@@ -139,16 +141,10 @@
             </div>
         </div>
     </div>
-    <section class="container p-t-3">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Bootstrap 4 Card Slider</h1>
-            </div>
-        </div>
-    </section>
+
 </div>
 <script src="/js/jquery-3.2.1.js"></script>
-<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery.backstretch.min.js"></script>
 <script src="/js/scripts.js"></script>
 @endsection

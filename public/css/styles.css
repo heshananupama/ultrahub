@@ -144,10 +144,10 @@
 
 /* ensure equal card height inside carousel */
 .carousel-inner>.row-equal.active,
-.carousel-inner>.row-equal.next,
-.carousel-inner>.row-equal.prev {
-    display: flex;
-}
+ .carousel-inner>.row-equal.next,
+ .carousel-inner>.row-equal.prev {
+     display: flex;
+ }
 
 /* prevent flicker during transition */
 .carousel-inner>.row-equal.active.left,
@@ -161,4 +161,12 @@
 .card-img-top-250 {
     max-height: 250px;
     overflow:hidden;
+}
+
+#contactFooter {
+    background: url('/Images/contact-1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')<br>
+<div class="row ">
+    <div class="col-sm-6">
+
+    </div>
+    <div class="col-sm-6">
+        <button class="btn btn-warning btn-lg">Post your add</button>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-6">
@@ -27,7 +35,7 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="card" style=" padding-bottom: 6px;">
+                                <div class="card" style=" padding-bottom: 9px;">
                                     <img class="card-img-top" src="{{asset('Images/Machinery.png')}}"
                                          alt="Card image cap">
                                     <div class="card-body">
@@ -220,10 +228,11 @@
 <section class="container p-t-3">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Bootstrap 4 Card Slider</h1>
+            <h1 style="color: #0f7864">Featured Products</h1>
         </div>
     </div>
 </section>
+
 <section class="carousel slide" data-ride="carousel" id="postsCarousel">
     <div class="container">
         <div class="row">
@@ -234,88 +243,104 @@
             </div>
         </div>
     </div>
-    <div class="container p-t-0 m-t-2 carousel-inner">
+    <br>
+    <div class="container carousel-inner">
         <div class="row row-equal carousel-item active m-t-0">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="http://i.imgur.com/EW5FgJM.png" alt="Carousel 1">
+                    <div class="card-img  h-200">
+                        <img   class="img-fluid" src="Images/toolsBackground.jpg" alt="Carousel 1">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2">Insight</h6>
-                        <h2>
-                            <a href>Why Stuff Happens Every Year.</a>
-                        </h2>
+                        <h6 align="center">
+                            <a href>Dewalt Dril Bits</a>
+                        </h6>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="http://i.imgur.com/Hw7sWGU.png" alt="Carousel 2">
+                    <div class="card-img h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/latheMill.jpg" alt="Carousel 2">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2">Development</h6>
-                        <h2>
-                            <a href>How to Make Every Line Count.</a>
-                        </h2>
+                         <h6 align="center">
+                            <a href>Smithy Lathe Mill </a>
+                        </h6>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="http://i.imgur.com/g27lAMl.png" alt="Carousel 3">
+                    <div  class="card-img  h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/jcb.jpg" alt="Carousel 2">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2">Design</h6>
-                        <h2>
-                            <a href>Responsive is Essential.</a>
-                        </h2>
+                         <h6 align="center">
+                            <a href>JCB 3C3fj</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-img h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/concreteMix.png" alt="Carousel 2">
+                    </div>
+                    <div class="card-block p-t-2">
+                         <h6 align="center">
+                            <a href>Electric Concrete mix</a>
+                        </h6>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row row-equal carousel-item m-t-0">
-            <div class="col-md-4">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="//visualhunt.com/photos/l/1/office-student-work-study.jpg"
-                             alt="Carousel 4">
+                    <div class="card-img  h-200">
+                        <img   class="img-fluid" src="Images/toolsBackground.jpg" alt="Carousel 1">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2">Another</h6>
-                        <h2>
-                            <a href>Tagline or Call-to-action.</a>
-                        </h2>
+                        <h6 align="center">
+                            <a href>Dewalt Dril Bits</a>
+                        </h6>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="//visualhunt.com/photos/l/1/working-woman-technology-computer.jpg"
-                             alt="Carousel 5">
+                    <div class="card-img h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/latheMill.jpg" alt="Carousel 2">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2"><span class="pull-xs-right">12.04</span> Category 1</h6>
-                        <h2>
-                            <a href>This is a Blog Title.</a>
-                        </h2>
+                        <h6 align="center">
+                            <a href>Smithy Lathe Mill </a>
+                        </h6>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 fadeIn wow">
+            <div class="col-sm-3">
                 <div class="card">
-                    <div class="card-img-top card-img-top-250">
-                        <img class="img-fluid" src="//visualhunt.com/photos/l/1/people-office-team-collaboration.jpg"
-                             alt="Carousel 6">
+                    <div  class="card-img  h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/jcb.jpg" alt="Carousel 2">
                     </div>
                     <div class="card-block p-t-2">
-                        <h6 class="small text-wide p-b-2">Category 3</h6>
-                        <h2>
-                            <a href>Catchy Title of a Blog Post.</a>
-                        </h2>
+                        <h6 align="center">
+                            <a href>JCB 3C3fj</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-img h-100">
+                        <img  class="img-fluid" src="/Images/welcomePageImages/concreteMix.png" alt="Carousel 2">
+                    </div>
+                    <div class="card-block p-t-2">
+                        <h6 align="center">
+                            <a href>Electric Concrete mix</a>
+                        </h6>
                     </div>
                 </div>
             </div>
@@ -323,107 +348,142 @@
     </div>
 </section>
 <br>
-<div class="row " style="margin-left:8%;margin-right:8%;">
-    <div class="col-sm-4">
-        <div class="card" style=" height: 200px;">
-            <div style="text-align: center;background-color: darkgray" class="card-header">
-                What's Ultrahub?
-            </div>
-            <div class="card-body">
-                 <p class="card-text"> Its a E-commerce web based application for supporting both the Customers and
-                     Sellers in the Machinery Industry.</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card" style=" height: 200px; ">
-            <div style="text-align: center;background-color: darkgray" class="card-header">
-                Purpose
-            </div>            <div class="card-body">
-                  <p class="card-text">How many times has it happened with you that the property,machinery that you are looking for is not available for renting or
-                      buying?  This is why we brought you UltraHub.com, your one stop shop for buying and renting all the
-                     machinery and accessories.</p>
-
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card" style=" height: 200px;">
-            <div style="text-align: center;background-color: darkgray" class="card-header">
-                What do we offer?
-            </div>
-            <div class="card-body">
-
-                 <p class="card-text"> We have taken care to bring you the widest collection of machinery, property, works.
-                     We offer a wide range of machinery, property etc. so that bost customer and supplier to have wide range of
-                     comparisons.</p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<br>
-<section id="contact">
-
-    <div class="contact-section">
-        <div class="container">
-            <form>
-                <div class="row">
-                    <div class="col-md-4 form-line">
-                        <div class="form-group">
-                            <label for="exampleInputUsername">Your name</label>
-                            <input type="text" class="form-control" id="" placeholder=" Enter Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail">Email Address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
-                        </div>
-                        <div class="form-group">
-                            <label for="telephone">Mobile No.</label>
-                            <input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
-                        </div>
-                        <div class="form-group">
-                            <label for ="description"> Message</label>
-                            <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
-                        </div>
-                        <div>
-
-                            <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-
-
-                    </div>
-                    <div class="col-sm-4">
-                        <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
-                    </div>
-
-                </div>
-
-
-            </form>
-        </div>
-</section>
 
 <div class="container">
+    <h1 style="color: #0f7864">Quick Search</h1><br>
     <div class="row">
 
-        <div class="col-sm-6">
-            <h2>Snail mail</h2>
-            <address>
-                <strong>Hythe Window Cleaning</strong><br>
-                15 Springfield Way<br>
-                Hythe<br>
-                Kent<br>
-                United Kingdon<br>
-                CT21 5SH<br>
-                <abbr title="Phone">P:</abbr> 01234 567 890
-            </address>
+        <div class="col-sm-3"><button style="height: 200px" class="btn btn-primary btn-block">
+                <img src="Images/best-value.png" height="150" width="150" />
+            </button></div>
+        <div class="col-sm-3"><button style="height: 200px" class="btn btn-success btn-block">
+                <img src="Images/Moneyback.png" height="150" width="150" />
+            </button></div>
+        <div class="col-sm-3"><button style="height: 200px" class="btn btn-info btn-block">
+                <img src="Images/hotDeal.png" height="170" width="170" />
+            </button></div>
+        <div class="col-sm-3"><button style="height: 200px" class="btn btn-warning btn-block">
+                <img src="Images/special-offer.png" height="150" width="150" />
+            </button></div>
+     </div>
+
+</div>
+<br>
+<div class="container">
+    <h1 style="color: #0f7864">About Us</h1><br>
+
+    <div class="row " >
+        <div class="col-sm-4">
+            <div class="card h-100"  >
+                <div style="text-align: center;background-color: darkgray" class="card-header">
+                    What's Ultrahub?
+                </div>
+                <div class="card-body">
+                    <p class="card-text"> Its a E-commerce web based application for supporting both the Customers and
+                        Sellers in the Machinery Industry.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card h-100" >
+                <div style="text-align: center;background-color: darkgray" class="card-header">
+                    Purpose
+                </div>            <div class="card-body">
+                    <p class="card-text">How many times has it happened with you that the property,machinery that you are looking for is not available for renting or
+                        buying?  This is why we brought you UltraHub.com, your one stop shop for buying and renting all the
+                        machinery and accessories.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card h-100"  >
+                <div style="text-align: center;background-color: darkgray" class="card-header">
+                    What do we offer?
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text"> We have taken care to bring you the widest collection of machinery, property, works.
+                        We offer a wide range of machinery, property etc. so that bost customer and supplier to have wide range of
+                        comparisons.</p>
+
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
+<br>
+<br>
+
+<footer>
+    <section id="contactFooter">
+
+        <div class="contact-section">
+            <div class="container" >
+
+                <form><br>
+                    <div class="row" >
+
+
+
+
+                        <div class="col-sm-4" style="color: black;text-align: right "><br>
+                            <h2>UltraHub Solutions</h2>
+                            <address style="text-align: center">
+                                <strong>
+                                 Old Keels Building,<br>
+                                Negombo Road,<br>
+                                Colombo.<br></strong>
+
+                                <abbr title="Phone"> <i class="fa fa-mobile-phone fa-lg">&nbsp;</i> </abbr> 01234 567 890
+                            </address>
+                        </div>
+                        <div class="col-sm-4">
+                             <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.208291519546!2d79.84328981431977!3d7.217065794789885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2eebdf1ee3447%3A0x7e8d81e014c42b6!2sUltraHub+Solutions!5e0!3m2!1sen!2slk!4v1513270598470" ></iframe>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card h-100" >
+                                <div class="card-header">
+                                    Contact Us
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-line">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="" placeholder=" Enter Name">
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+                                        </div>
+                                        <br>
+
+                                        <div class="form-group">
+                                            <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+                                        </div>
+                                        <br>
+                                        <div>
+
+                                            <button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+</footer>
+
+
 <script src="/js/jquery-3.2.1.js"></script>
 <script src="/js/popper.min.js"></script>
 

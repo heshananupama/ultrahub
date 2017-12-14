@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content')<br><br>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+        <div class="col-sm-8 offset-2">
+            <div class="card">
+                <div class="card-heading" style="text-align: center">
+                    <h3 style="font-weight: 900;color: #0f7864;margin-left: 10px;  float: left  ">Reset Password</h3>
 
-                <div class="panel-body">
+                </div>
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -18,9 +20,9 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-sm-4 control-label">E-Mail Address</label>
 
-                            <div class="col-md-6">
+                            <div class="col-sm-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
 
                                 @if ($errors->has('email'))
@@ -32,7 +34,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-sm-6 sm-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Send Password Reset Link
                                 </button>
@@ -44,4 +46,10 @@
         </div>
     </div>
 </div>
+<script src="/js/jquery-3.2.1.js"></script>
+<script src="/js/popper.min.js"></script>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.backstretch.min.js"></script>
+<script src="/js/scripts.js"></script>
 @endsection
